@@ -1,0 +1,35 @@
+[0.017s] Invoking command in '/home/robot/word/build/warehouse_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/robot/word/src/warehouse_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/robot/word/install/warehouse_description
+[0.031s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.121s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.126s] -- Found xacro: 2.1.1 (/opt/ros/humble/share/xacro/cmake)
+[0.127s] -- Found robot_state_publisher: 3.0.3 (/opt/ros/humble/share/robot_state_publisher/cmake)
+[0.146s] -- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.148s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.153s] -- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.161s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.172s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.199s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.200s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.217s] -- Found rmw_implementation_cmake: 6.1.3 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.218s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.297s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.399s] [31mCMake Error at CMakeLists.txt:17 (find_package):
+[0.399s]   By not providing "Findjoint_state_publisher_gui.cmake" in CMAKE_MODULE_PATH
+[0.399s]   this project has asked CMake to find a package configuration file provided
+[0.399s]   by "joint_state_publisher_gui", but CMake did not find one.
+[0.399s] 
+[0.399s]   Could not find a package configuration file provided by
+[0.399s]   "joint_state_publisher_gui" with any of the following names:
+[0.399s] 
+[0.400s]     joint_state_publisher_guiConfig.cmake
+[0.400s]     joint_state_publisher_gui-config.cmake
+[0.400s] 
+[0.400s]   Add the installation prefix of "joint_state_publisher_gui" to
+[0.400s]   CMAKE_PREFIX_PATH or set "joint_state_publisher_gui_DIR" to a directory
+[0.400s]   containing one of the above files.  If "joint_state_publisher_gui" provides
+[0.400s]   a separate development package or SDK, be sure it has been installed.
+[0.400s] 
+[0.400s] [0m
+[0.400s] -- Configuring incomplete, errors occurred!
+[0.400s] See also "/home/robot/word/build/warehouse_description/CMakeFiles/CMakeOutput.log".
+[0.407s] Invoked command in '/home/robot/word/build/warehouse_description' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/robot/word/src/warehouse_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/robot/word/install/warehouse_description

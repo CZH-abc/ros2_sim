@@ -1,0 +1,15 @@
+/home/robot/word/install/warehouse_gazebo/share/ament_index/resource_index/package_run_dependencies/warehouse_gazebo
+/home/robot/word/install/warehouse_gazebo/share/ament_index/resource_index/parent_prefix_path/warehouse_gazebo
+/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/environment/ament_prefix_path.sh
+/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/environment/ament_prefix_path.dsv
+/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/environment/path.sh
+/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/environment/path.dsv
+/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/local_setup.bash
+/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/local_setup.sh
+/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/local_setup.zsh
+/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/local_setup.dsv
+/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/package.dsv
+/home/robot/word/install/warehouse_gazebo/share/ament_index/resource_index/packages/warehouse_gazebo
+/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/cmake/warehouse_gazeboConfig.cmake
+/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/cmake/warehouse_gazeboConfig-version.cmake
+/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/package.xml

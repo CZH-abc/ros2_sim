@@ -1,0 +1,21 @@
+[0.009s] Invoking command in '/home/robot/word/build/warehouse_nav': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/robot/word/build/warehouse_nav -- -j2 -l2
+[0.048s] Invoked command in '/home/robot/word/build/warehouse_nav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/robot/word/build/warehouse_nav -- -j2 -l2
+[0.053s] Invoking command in '/home/robot/word/build/warehouse_nav': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/robot/word/build/warehouse_nav
+[0.057s] -- Install configuration: ""
+[0.057s] -- Execute custom install script
+[0.058s] -- Up-to-date symlink: /home/robot/word/install/warehouse_nav/share/ament_index/resource_index/package_run_dependencies/warehouse_nav
+[0.061s] -- Up-to-date symlink: /home/robot/word/install/warehouse_nav/share/ament_index/resource_index/parent_prefix_path/warehouse_nav
+[0.061s] -- Up-to-date symlink: /home/robot/word/install/warehouse_nav/share/warehouse_nav/environment/ament_prefix_path.sh
+[0.061s] -- Up-to-date symlink: /home/robot/word/install/warehouse_nav/share/warehouse_nav/environment/ament_prefix_path.dsv
+[0.061s] -- Up-to-date symlink: /home/robot/word/install/warehouse_nav/share/warehouse_nav/environment/path.sh
+[0.061s] -- Up-to-date symlink: /home/robot/word/install/warehouse_nav/share/warehouse_nav/environment/path.dsv
+[0.061s] -- Up-to-date symlink: /home/robot/word/install/warehouse_nav/share/warehouse_nav/local_setup.bash
+[0.062s] -- Up-to-date symlink: /home/robot/word/install/warehouse_nav/share/warehouse_nav/local_setup.sh
+[0.062s] -- Up-to-date symlink: /home/robot/word/install/warehouse_nav/share/warehouse_nav/local_setup.zsh
+[0.063s] -- Up-to-date symlink: /home/robot/word/install/warehouse_nav/share/warehouse_nav/local_setup.dsv
+[0.063s] -- Symlinking: /home/robot/word/install/warehouse_nav/share/warehouse_nav/package.dsv
+[0.071s] -- Up-to-date symlink: /home/robot/word/install/warehouse_nav/share/ament_index/resource_index/packages/warehouse_nav
+[0.074s] -- Up-to-date symlink: /home/robot/word/install/warehouse_nav/share/warehouse_nav/cmake/warehouse_navConfig.cmake
+[0.074s] -- Up-to-date symlink: /home/robot/word/install/warehouse_nav/share/warehouse_nav/cmake/warehouse_navConfig-version.cmake
+[0.074s] -- Up-to-date symlink: /home/robot/word/install/warehouse_nav/share/warehouse_nav/package.xml
+[0.074s] Invoked command in '/home/robot/word/build/warehouse_nav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/robot/word/build/warehouse_nav

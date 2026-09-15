@@ -1,0 +1,16 @@
+[0.689s] Invoking command in '/home/robot/word/build/warehouse_bringup': PYTHONPATH=/home/robot/word/build/warehouse_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/robot/word/build/warehouse_bringup/build --no-deps symlink_data
+[0.843s] running develop
+[0.932s] running egg_info
+[0.932s] writing warehouse_bringup.egg-info/PKG-INFO
+[0.933s] writing dependency_links to warehouse_bringup.egg-info/dependency_links.txt
+[0.933s] writing entry points to warehouse_bringup.egg-info/entry_points.txt
+[0.933s] writing requirements to warehouse_bringup.egg-info/requires.txt
+[0.933s] writing top-level names to warehouse_bringup.egg-info/top_level.txt
+[0.936s] reading manifest file 'warehouse_bringup.egg-info/SOURCES.txt'
+[0.936s] writing manifest file 'warehouse_bringup.egg-info/SOURCES.txt'
+[0.936s] running build_ext
+[0.936s] Creating /home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages/warehouse-bringup.egg-link (link to .)
+[0.937s] 
+[0.937s] Installed /home/robot/word/build/warehouse_bringup
+[0.937s] running symlink_data
+[0.970s] Invoked command in '/home/robot/word/build/warehouse_bringup' returned '0': PYTHONPATH=/home/robot/word/build/warehouse_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/robot/word/build/warehouse_bringup/build --no-deps symlink_data

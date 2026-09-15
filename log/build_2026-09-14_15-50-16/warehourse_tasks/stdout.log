@@ -1,0 +1,28 @@
+running develop
+Removing /home/robot/word/install/warehourse_tasks/lib/python3.10/site-packages/warehourse-tasks.egg-link (link to .)
+running egg_info
+writing ../../build/warehourse_tasks/warehourse_tasks.egg-info/PKG-INFO
+writing dependency_links to ../../build/warehourse_tasks/warehourse_tasks.egg-info/dependency_links.txt
+writing entry points to ../../build/warehourse_tasks/warehourse_tasks.egg-info/entry_points.txt
+writing requirements to ../../build/warehourse_tasks/warehourse_tasks.egg-info/requires.txt
+writing top-level names to ../../build/warehourse_tasks/warehourse_tasks.egg-info/top_level.txt
+reading manifest file '../../build/warehourse_tasks/warehourse_tasks.egg-info/SOURCES.txt'
+writing manifest file '../../build/warehourse_tasks/warehourse_tasks.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/robot/word/build/warehourse_tasks/build
+creating /home/robot/word/build/warehourse_tasks/build/lib
+creating /home/robot/word/build/warehourse_tasks/build/lib/warehourse_tasks
+copying warehourse_tasks/__init__.py -> /home/robot/word/build/warehourse_tasks/build/lib/warehourse_tasks
+running install
+running install_lib
+creating /home/robot/word/install/warehourse_tasks/lib/python3.10/site-packages/warehourse_tasks
+copying /home/robot/word/build/warehourse_tasks/build/lib/warehourse_tasks/__init__.py -> /home/robot/word/install/warehourse_tasks/lib/python3.10/site-packages/warehourse_tasks
+byte-compiling /home/robot/word/install/warehourse_tasks/lib/python3.10/site-packages/warehourse_tasks/__init__.py to __init__.cpython-310.pyc
+running install_data
+copying resource/warehourse_tasks -> /home/robot/word/install/warehourse_tasks/share/ament_index/resource_index/packages
+copying package.xml -> /home/robot/word/install/warehourse_tasks/share/warehourse_tasks
+running install_egg_info
+Copying ../../build/warehourse_tasks/warehourse_tasks.egg-info to /home/robot/word/install/warehourse_tasks/lib/python3.10/site-packages/warehourse_tasks-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/robot/word/build/warehourse_tasks/install.log'

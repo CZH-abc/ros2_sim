@@ -1,0 +1,6 @@
+Invoking command in '/home/robot/word/build/warehouse_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/robot/word/src/warehouse_description -DCMAKE_INSTALL_PREFIX=/home/robot/word/install/warehouse_description
+Invoked command in '/home/robot/word/build/warehouse_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/robot/word/src/warehouse_description -DCMAKE_INSTALL_PREFIX=/home/robot/word/install/warehouse_description
+Invoking command in '/home/robot/word/build/warehouse_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/robot/word/build/warehouse_description -- -j2 -l2
+Invoked command in '/home/robot/word/build/warehouse_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/robot/word/build/warehouse_description -- -j2 -l2
+Invoking command in '/home/robot/word/build/warehouse_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/robot/word/build/warehouse_description
+Invoked command in '/home/robot/word/build/warehouse_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/robot/word/build/warehouse_description

@@ -1,0 +1,2 @@
+Invoking command in '/home/robot/word/build/warehouse_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/robot/word/src/warehouse_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/robot/word/install/warehouse_description
+Invoked command in '/home/robot/word/build/warehouse_description' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/robot/word/src/warehouse_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/robot/word/install/warehouse_description

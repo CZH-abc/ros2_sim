@@ -1,0 +1,319 @@
+[0.059s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.059s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=2, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7a457c113e80>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7a457c113580>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7a457c113580>>)
+[0.144s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.144s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.144s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.144s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.144s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.144s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.144s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/robot/word'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_bringup) by extension 'ignore'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_bringup) by extension 'ignore_ament_install'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_bringup) by extensions ['colcon_pkg']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_bringup) by extension 'colcon_pkg'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_bringup) by extensions ['colcon_meta']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_bringup) by extension 'colcon_meta'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_bringup) by extensions ['ros']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_bringup) by extension 'ros'
+[0.153s] DEBUG:colcon.colcon_core.package_identification:Package 'src/warehouse_bringup' with type 'ros.ament_python' and name 'warehouse_bringup'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_description) by extensions ['ignore', 'ignore_ament_install']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_description) by extension 'ignore'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_description) by extension 'ignore_ament_install'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_description) by extensions ['colcon_pkg']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_description) by extension 'colcon_pkg'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_description) by extensions ['colcon_meta']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_description) by extension 'colcon_meta'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_description) by extensions ['ros']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_description) by extension 'ros'
+[0.153s] DEBUG:colcon.colcon_core.package_identification:Package 'src/warehouse_description' with type 'ros.ament_cmake' and name 'warehouse_description'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_gazebo) by extension 'ignore'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_gazebo) by extension 'ignore_ament_install'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_gazebo) by extensions ['colcon_pkg']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_gazebo) by extension 'colcon_pkg'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_gazebo) by extensions ['colcon_meta']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_gazebo) by extension 'colcon_meta'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_gazebo) by extensions ['ros']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_gazebo) by extension 'ros'
+[0.154s] DEBUG:colcon.colcon_core.package_identification:Package 'src/warehouse_gazebo' with type 'ros.ament_cmake' and name 'warehouse_gazebo'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_nav) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_nav) by extension 'ignore'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_nav) by extension 'ignore_ament_install'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_nav) by extensions ['colcon_pkg']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_nav) by extension 'colcon_pkg'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_nav) by extensions ['colcon_meta']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_nav) by extension 'colcon_meta'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_nav) by extensions ['ros']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/warehouse_nav) by extension 'ros'
+[0.154s] DEBUG:colcon.colcon_core.package_identification:Package 'src/warehouse_nav' with type 'ros.ament_cmake' and name 'warehouse_nav'
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.175s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 386 installed packages in /opt/ros/humble
+[0.176s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_bringup' build argument 'cmake_args' from command line to 'None'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_bringup' build argument 'cmake_target' from command line to 'None'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.203s] DEBUG:colcon.colcon_core.verb:Building package 'warehouse_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robot/word/build/warehouse_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robot/word/install/warehouse_bringup', 'merge_install': False, 'path': '/home/robot/word/src/warehouse_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_description' build argument 'cmake_args' from command line to 'None'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_description' build argument 'cmake_target' from command line to 'None'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.203s] DEBUG:colcon.colcon_core.verb:Building package 'warehouse_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robot/word/build/warehouse_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robot/word/install/warehouse_description', 'merge_install': False, 'path': '/home/robot/word/src/warehouse_description', 'symlink_install': False, 'test_result_base': None}
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.203s] DEBUG:colcon.colcon_core.verb:Building package 'warehouse_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robot/word/build/warehouse_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robot/word/install/warehouse_gazebo', 'merge_install': False, 'path': '/home/robot/word/src/warehouse_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_nav' build argument 'cmake_args' from command line to 'None'
+[0.203s] Level 5:colcon.colcon_core.verb:set package 'warehouse_nav' build argument 'cmake_target' from command line to 'None'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'warehouse_nav' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'warehouse_nav' build argument 'cmake_clean_cache' from command line to 'False'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'warehouse_nav' build argument 'cmake_clean_first' from command line to 'False'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'warehouse_nav' build argument 'cmake_force_configure' from command line to 'False'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'warehouse_nav' build argument 'ament_cmake_args' from command line to 'None'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'warehouse_nav' build argument 'catkin_cmake_args' from command line to 'None'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'warehouse_nav' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.204s] DEBUG:colcon.colcon_core.verb:Building package 'warehouse_nav' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robot/word/build/warehouse_nav', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robot/word/install/warehouse_nav', 'merge_install': False, 'path': '/home/robot/word/src/warehouse_nav', 'symlink_install': False, 'test_result_base': None}
+[0.204s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.204s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.205s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/robot/word/src/warehouse_bringup' with build type 'ament_python'
+[0.205s] Level 1:colcon.colcon_core.shell:create_environment_hook('warehouse_bringup', 'ament_prefix_path')
+[0.206s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.206s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robot/word/install/warehouse_bringup/share/warehouse_bringup/hook/ament_prefix_path.ps1'
+[0.207s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robot/word/install/warehouse_bringup/share/warehouse_bringup/hook/ament_prefix_path.dsv'
+[0.207s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robot/word/install/warehouse_bringup/share/warehouse_bringup/hook/ament_prefix_path.sh'
+[0.207s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.208s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.210s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/robot/word/src/warehouse_description' with build type 'ament_cmake'
+[0.210s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/robot/word/src/warehouse_description'
+[0.211s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.211s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.356s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/robot/word/src/warehouse_bringup'
+[0.356s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.356s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.362s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robot/word/build/warehouse_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/robot/word/src/warehouse_description -DCMAKE_INSTALL_PREFIX=/home/robot/word/install/warehouse_description
+[0.747s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: install_lib, develop, build_clib, compile_catalog, install_egg_info, egg_info, build, build_ext, install_data, install, bdist, init_catalog, saveopts, extract_messages, register, bdist_dumb, sdist, bdist_egg, check, alias, build_py, bdist_rpm, upload_docs, setopt, easy_install, install_scripts, symlink_data, test, install_headers, update_catalog, build_scripts, dist_info, rotate, upload, clean
+[0.753s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robot/word/src/warehouse_bringup': PYTHONPATH=/home/robot/word/build/warehouse_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/warehouse_bringup build --build-base /home/robot/word/build/warehouse_bringup/build install --record /home/robot/word/build/warehouse_bringup/install.log --install-scripts $base/lib/warehouse_bringup --single-version-externally-managed install_data
+[0.806s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robot/word/build/warehouse_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/robot/word/src/warehouse_description -DCMAKE_INSTALL_PREFIX=/home/robot/word/install/warehouse_description
+[0.809s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robot/word/build/warehouse_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/robot/word/build/warehouse_description -- -j2 -l2
+[0.841s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robot/word/build/warehouse_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/robot/word/build/warehouse_description -- -j2 -l2
+[0.853s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robot/word/build/warehouse_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/robot/word/build/warehouse_description
+[0.861s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(warehouse_description)
+[0.862s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robot/word/build/warehouse_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/robot/word/build/warehouse_description
+[0.864s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_description' for CMake module files
+[0.864s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_description' for CMake config files
+[0.864s] Level 1:colcon.colcon_core.shell:create_environment_hook('warehouse_description', 'cmake_prefix_path')
+[0.864s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robot/word/install/warehouse_description/share/warehouse_description/hook/cmake_prefix_path.ps1'
+[0.864s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robot/word/install/warehouse_description/share/warehouse_description/hook/cmake_prefix_path.dsv'
+[0.865s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robot/word/install/warehouse_description/share/warehouse_description/hook/cmake_prefix_path.sh'
+[0.865s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_description/bin'
+[0.865s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_description/lib/pkgconfig/warehouse_description.pc'
+[0.865s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_description/lib/python3.10/site-packages'
+[0.865s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_description/bin'
+[0.865s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_description/share/warehouse_description/package.ps1'
+[0.866s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robot/word/install/warehouse_description/share/warehouse_description/package.dsv'
+[0.867s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_description/share/warehouse_description/package.sh'
+[0.867s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_description/share/warehouse_description/package.bash'
+[0.867s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_description/share/warehouse_description/package.zsh'
+[0.868s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robot/word/install/warehouse_description/share/colcon-core/packages/warehouse_description)
+[0.868s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(warehouse_description)
+[0.868s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_description' for CMake module files
+[0.868s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_description' for CMake config files
+[0.868s] Level 1:colcon.colcon_core.shell:create_environment_hook('warehouse_description', 'cmake_prefix_path')
+[0.868s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robot/word/install/warehouse_description/share/warehouse_description/hook/cmake_prefix_path.ps1'
+[0.869s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robot/word/install/warehouse_description/share/warehouse_description/hook/cmake_prefix_path.dsv'
+[0.869s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robot/word/install/warehouse_description/share/warehouse_description/hook/cmake_prefix_path.sh'
+[0.869s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_description/bin'
+[0.870s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_description/lib/pkgconfig/warehouse_description.pc'
+[0.870s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_description/lib/python3.10/site-packages'
+[0.870s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_description/bin'
+[0.870s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_description/share/warehouse_description/package.ps1'
+[0.870s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robot/word/install/warehouse_description/share/warehouse_description/package.dsv'
+[0.871s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_description/share/warehouse_description/package.sh'
+[0.871s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_description/share/warehouse_description/package.bash'
+[0.871s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_description/share/warehouse_description/package.zsh'
+[0.872s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robot/word/install/warehouse_description/share/colcon-core/packages/warehouse_description)
+[0.872s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/robot/word/src/warehouse_gazebo' with build type 'ament_cmake'
+[0.872s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/robot/word/src/warehouse_gazebo'
+[0.872s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.872s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.878s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robot/word/build/warehouse_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/robot/word/src/warehouse_gazebo -DCMAKE_INSTALL_PREFIX=/home/robot/word/install/warehouse_gazebo
+[0.929s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_bringup' for CMake module files
+[0.929s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_bringup' for CMake config files
+[0.930s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_bringup/lib'
+[0.930s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_bringup/bin'
+[0.930s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_bringup/lib/pkgconfig/warehouse_bringup.pc'
+[0.930s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages'
+[0.930s] Level 1:colcon.colcon_core.shell:create_environment_hook('warehouse_bringup', 'pythonpath')
+[0.931s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robot/word/install/warehouse_bringup/share/warehouse_bringup/hook/pythonpath.ps1'
+[0.931s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robot/word/src/warehouse_bringup' returned '0': PYTHONPATH=/home/robot/word/build/warehouse_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/warehouse_bringup build --build-base /home/robot/word/build/warehouse_bringup/build install --record /home/robot/word/build/warehouse_bringup/install.log --install-scripts $base/lib/warehouse_bringup --single-version-externally-managed install_data
+[0.931s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robot/word/install/warehouse_bringup/share/warehouse_bringup/hook/pythonpath.dsv'
+[0.931s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robot/word/install/warehouse_bringup/share/warehouse_bringup/hook/pythonpath.sh'
+[0.932s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_bringup/bin'
+[0.932s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(warehouse_bringup)
+[0.932s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_bringup/share/warehouse_bringup/package.ps1'
+[0.932s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robot/word/install/warehouse_bringup/share/warehouse_bringup/package.dsv'
+[0.933s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_bringup/share/warehouse_bringup/package.sh'
+[0.933s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_bringup/share/warehouse_bringup/package.bash'
+[0.933s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_bringup/share/warehouse_bringup/package.zsh'
+[0.933s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robot/word/install/warehouse_bringup/share/colcon-core/packages/warehouse_bringup)
+[0.934s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/robot/word/src/warehouse_nav' with build type 'ament_cmake'
+[0.934s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/robot/word/src/warehouse_nav'
+[0.934s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.934s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.942s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robot/word/build/warehouse_nav': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/robot/word/src/warehouse_nav -DCMAKE_INSTALL_PREFIX=/home/robot/word/install/warehouse_nav
+[1.366s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robot/word/build/warehouse_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/robot/word/src/warehouse_gazebo -DCMAKE_INSTALL_PREFIX=/home/robot/word/install/warehouse_gazebo
+[1.366s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robot/word/build/warehouse_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/robot/word/build/warehouse_gazebo -- -j2 -l2
+[1.400s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robot/word/build/warehouse_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/robot/word/build/warehouse_gazebo -- -j2 -l2
+[1.401s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robot/word/build/warehouse_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/robot/word/build/warehouse_gazebo
+[1.405s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robot/word/build/warehouse_nav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/robot/word/src/warehouse_nav -DCMAKE_INSTALL_PREFIX=/home/robot/word/install/warehouse_nav
+[1.406s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robot/word/build/warehouse_nav': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/robot/word/build/warehouse_nav -- -j2 -l2
+[1.411s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(warehouse_gazebo)
+[1.412s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_gazebo' for CMake module files
+[1.412s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_gazebo' for CMake config files
+[1.412s] Level 1:colcon.colcon_core.shell:create_environment_hook('warehouse_gazebo', 'cmake_prefix_path')
+[1.412s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/hook/cmake_prefix_path.ps1'
+[1.413s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/hook/cmake_prefix_path.dsv'
+[1.413s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/hook/cmake_prefix_path.sh'
+[1.413s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_gazebo/bin'
+[1.413s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_gazebo/lib/pkgconfig/warehouse_gazebo.pc'
+[1.413s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_gazebo/lib/python3.10/site-packages'
+[1.412s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robot/word/build/warehouse_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/robot/word/build/warehouse_gazebo
+[1.413s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_gazebo/bin'
+[1.414s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/package.ps1'
+[1.414s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/package.dsv'
+[1.414s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/package.sh'
+[1.415s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/package.bash'
+[1.415s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/package.zsh'
+[1.415s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robot/word/install/warehouse_gazebo/share/colcon-core/packages/warehouse_gazebo)
+[1.415s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(warehouse_gazebo)
+[1.416s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_gazebo' for CMake module files
+[1.416s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_gazebo' for CMake config files
+[1.416s] Level 1:colcon.colcon_core.shell:create_environment_hook('warehouse_gazebo', 'cmake_prefix_path')
+[1.416s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/hook/cmake_prefix_path.ps1'
+[1.416s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/hook/cmake_prefix_path.dsv'
+[1.417s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/hook/cmake_prefix_path.sh'
+[1.417s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_gazebo/bin'
+[1.417s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_gazebo/lib/pkgconfig/warehouse_gazebo.pc'
+[1.417s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_gazebo/lib/python3.10/site-packages'
+[1.417s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_gazebo/bin'
+[1.417s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/package.ps1'
+[1.418s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/package.dsv'
+[1.418s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/package.sh'
+[1.419s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/package.bash'
+[1.419s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_gazebo/share/warehouse_gazebo/package.zsh'
+[1.419s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robot/word/install/warehouse_gazebo/share/colcon-core/packages/warehouse_gazebo)
+[1.439s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robot/word/build/warehouse_nav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/robot/word/build/warehouse_nav -- -j2 -l2
+[1.439s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robot/word/build/warehouse_nav': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/robot/word/build/warehouse_nav
+[1.450s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(warehouse_nav)
+[1.451s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_nav' for CMake module files
+[1.451s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_nav' for CMake config files
+[1.451s] Level 1:colcon.colcon_core.shell:create_environment_hook('warehouse_nav', 'cmake_prefix_path')
+[1.451s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robot/word/install/warehouse_nav/share/warehouse_nav/hook/cmake_prefix_path.ps1'
+[1.451s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robot/word/build/warehouse_nav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/robot/word/build/warehouse_nav
+[1.452s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robot/word/install/warehouse_nav/share/warehouse_nav/hook/cmake_prefix_path.dsv'
+[1.452s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robot/word/install/warehouse_nav/share/warehouse_nav/hook/cmake_prefix_path.sh'
+[1.452s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_nav/bin'
+[1.452s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_nav/lib/pkgconfig/warehouse_nav.pc'
+[1.452s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_nav/lib/python3.10/site-packages'
+[1.453s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_nav/bin'
+[1.453s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_nav/share/warehouse_nav/package.ps1'
+[1.453s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robot/word/install/warehouse_nav/share/warehouse_nav/package.dsv'
+[1.453s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_nav/share/warehouse_nav/package.sh'
+[1.454s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_nav/share/warehouse_nav/package.bash'
+[1.454s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_nav/share/warehouse_nav/package.zsh'
+[1.454s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robot/word/install/warehouse_nav/share/colcon-core/packages/warehouse_nav)
+[1.454s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(warehouse_nav)
+[1.454s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_nav' for CMake module files
+[1.455s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_nav' for CMake config files
+[1.455s] Level 1:colcon.colcon_core.shell:create_environment_hook('warehouse_nav', 'cmake_prefix_path')
+[1.455s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robot/word/install/warehouse_nav/share/warehouse_nav/hook/cmake_prefix_path.ps1'
+[1.455s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robot/word/install/warehouse_nav/share/warehouse_nav/hook/cmake_prefix_path.dsv'
+[1.455s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robot/word/install/warehouse_nav/share/warehouse_nav/hook/cmake_prefix_path.sh'
+[1.456s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_nav/bin'
+[1.456s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_nav/lib/pkgconfig/warehouse_nav.pc'
+[1.456s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_nav/lib/python3.10/site-packages'
+[1.456s] Level 1:colcon.colcon_core.environment:checking '/home/robot/word/install/warehouse_nav/bin'
+[1.456s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_nav/share/warehouse_nav/package.ps1'
+[1.457s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robot/word/install/warehouse_nav/share/warehouse_nav/package.dsv'
+[1.457s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_nav/share/warehouse_nav/package.sh'
+[1.457s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_nav/share/warehouse_nav/package.bash'
+[1.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/robot/word/install/warehouse_nav/share/warehouse_nav/package.zsh'
+[1.458s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robot/word/install/warehouse_nav/share/colcon-core/packages/warehouse_nav)
+[1.458s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.458s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.458s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.458s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.462s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.462s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.462s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.472s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.472s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robot/word/install/local_setup.ps1'
+[1.473s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/robot/word/install/_local_setup_util_ps1.py'
+[1.474s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robot/word/install/setup.ps1'
+[1.475s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robot/word/install/local_setup.sh'
+[1.475s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/robot/word/install/_local_setup_util_sh.py'
+[1.476s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robot/word/install/setup.sh'
+[1.477s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robot/word/install/local_setup.bash'
+[1.477s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robot/word/install/setup.bash'
+[1.478s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robot/word/install/local_setup.zsh'
+[1.478s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robot/word/install/setup.zsh'

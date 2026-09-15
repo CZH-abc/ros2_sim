@@ -1,0 +1,33 @@
+[0.548s] Invoking command in '/home/robot/word/src/warehouse_bringup': PYTHONPATH=/home/robot/word/build/warehouse_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/warehouse_bringup build --build-base /home/robot/word/build/warehouse_bringup/build install --record /home/robot/word/build/warehouse_bringup/install.log --install-scripts $base/lib/warehouse_bringup --single-version-externally-managed install_data
+[0.682s] running egg_info
+[0.682s] creating ../../build/warehouse_bringup/warehouse_bringup.egg-info
+[0.683s] writing ../../build/warehouse_bringup/warehouse_bringup.egg-info/PKG-INFO
+[0.683s] writing dependency_links to ../../build/warehouse_bringup/warehouse_bringup.egg-info/dependency_links.txt
+[0.683s] writing entry points to ../../build/warehouse_bringup/warehouse_bringup.egg-info/entry_points.txt
+[0.683s] writing requirements to ../../build/warehouse_bringup/warehouse_bringup.egg-info/requires.txt
+[0.683s] writing top-level names to ../../build/warehouse_bringup/warehouse_bringup.egg-info/top_level.txt
+[0.683s] writing manifest file '../../build/warehouse_bringup/warehouse_bringup.egg-info/SOURCES.txt'
+[0.685s] reading manifest file '../../build/warehouse_bringup/warehouse_bringup.egg-info/SOURCES.txt'
+[0.685s] writing manifest file '../../build/warehouse_bringup/warehouse_bringup.egg-info/SOURCES.txt'
+[0.685s] running build
+[0.685s] running build_py
+[0.685s] creating /home/robot/word/build/warehouse_bringup/build
+[0.685s] creating /home/robot/word/build/warehouse_bringup/build/lib
+[0.685s] creating /home/robot/word/build/warehouse_bringup/build/lib/warehouse_bringup
+[0.685s] copying warehouse_bringup/__init__.py -> /home/robot/word/build/warehouse_bringup/build/lib/warehouse_bringup
+[0.685s] running install
+[0.686s] running install_lib
+[0.686s] creating /home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages/warehouse_bringup
+[0.686s] copying /home/robot/word/build/warehouse_bringup/build/lib/warehouse_bringup/__init__.py -> /home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages/warehouse_bringup
+[0.688s] byte-compiling /home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages/warehouse_bringup/__init__.py to __init__.cpython-310.pyc
+[0.688s] running install_data
+[0.688s] creating /home/robot/word/install/warehouse_bringup/share/ament_index
+[0.688s] creating /home/robot/word/install/warehouse_bringup/share/ament_index/resource_index
+[0.688s] creating /home/robot/word/install/warehouse_bringup/share/ament_index/resource_index/packages
+[0.688s] copying resource/warehouse_bringup -> /home/robot/word/install/warehouse_bringup/share/ament_index/resource_index/packages
+[0.688s] copying package.xml -> /home/robot/word/install/warehouse_bringup/share/warehouse_bringup
+[0.688s] running install_egg_info
+[0.688s] Copying ../../build/warehouse_bringup/warehouse_bringup.egg-info to /home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages/warehouse_bringup-0.0.0-py3.10.egg-info
+[0.689s] running install_scripts
+[0.704s] writing list of installed files to '/home/robot/word/build/warehouse_bringup/install.log'
+[0.726s] Invoked command in '/home/robot/word/src/warehouse_bringup' returned '0': PYTHONPATH=/home/robot/word/build/warehouse_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/warehouse_bringup build --build-base /home/robot/word/build/warehouse_bringup/build install --record /home/robot/word/build/warehouse_bringup/install.log --install-scripts $base/lib/warehouse_bringup --single-version-externally-managed install_data

@@ -1,0 +1,1 @@
+/home/robot/word/build/warehouse_description/ament_cmake_core/warehouse_descriptionConfig-version.cmake

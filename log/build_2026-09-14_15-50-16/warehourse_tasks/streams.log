@@ -1,0 +1,32 @@
+[0.748s] Invoking command in '/home/robot/word/build/warehourse_tasks': PYTHONPATH=/home/robot/word/build/warehourse_tasks/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robot/word/install/warehourse_tasks/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/robot/word/build/warehourse_tasks/build
+[0.896s] running develop
+[0.983s] Removing /home/robot/word/install/warehourse_tasks/lib/python3.10/site-packages/warehourse-tasks.egg-link (link to .)
+[1.010s] Invoked command in '/home/robot/word/build/warehourse_tasks' returned '0': PYTHONPATH=/home/robot/word/build/warehourse_tasks/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robot/word/install/warehourse_tasks/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/robot/word/build/warehourse_tasks/build
+[1.011s] Invoking command in '/home/robot/word/src/warehourse_tasks': PYTHONPATH=/home/robot/word/build/warehourse_tasks/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robot/word/install/warehourse_tasks/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/warehourse_tasks build --build-base /home/robot/word/build/warehourse_tasks/build install --record /home/robot/word/build/warehourse_tasks/install.log --install-scripts $base/lib/warehourse_tasks --single-version-externally-managed install_data --force
+[1.148s] running egg_info
+[1.149s] writing ../../build/warehourse_tasks/warehourse_tasks.egg-info/PKG-INFO
+[1.149s] writing dependency_links to ../../build/warehourse_tasks/warehourse_tasks.egg-info/dependency_links.txt
+[1.150s] writing entry points to ../../build/warehourse_tasks/warehourse_tasks.egg-info/entry_points.txt
+[1.150s] writing requirements to ../../build/warehourse_tasks/warehourse_tasks.egg-info/requires.txt
+[1.150s] writing top-level names to ../../build/warehourse_tasks/warehourse_tasks.egg-info/top_level.txt
+[1.152s] reading manifest file '../../build/warehourse_tasks/warehourse_tasks.egg-info/SOURCES.txt'
+[1.153s] writing manifest file '../../build/warehourse_tasks/warehourse_tasks.egg-info/SOURCES.txt'
+[1.153s] running build
+[1.153s] running build_py
+[1.154s] creating /home/robot/word/build/warehourse_tasks/build
+[1.154s] creating /home/robot/word/build/warehourse_tasks/build/lib
+[1.154s] creating /home/robot/word/build/warehourse_tasks/build/lib/warehourse_tasks
+[1.154s] copying warehourse_tasks/__init__.py -> /home/robot/word/build/warehourse_tasks/build/lib/warehourse_tasks
+[1.155s] running install
+[1.155s] running install_lib
+[1.156s] creating /home/robot/word/install/warehourse_tasks/lib/python3.10/site-packages/warehourse_tasks
+[1.157s] copying /home/robot/word/build/warehourse_tasks/build/lib/warehourse_tasks/__init__.py -> /home/robot/word/install/warehourse_tasks/lib/python3.10/site-packages/warehourse_tasks
+[1.157s] byte-compiling /home/robot/word/install/warehourse_tasks/lib/python3.10/site-packages/warehourse_tasks/__init__.py to __init__.cpython-310.pyc
+[1.158s] running install_data
+[1.158s] copying resource/warehourse_tasks -> /home/robot/word/install/warehourse_tasks/share/ament_index/resource_index/packages
+[1.160s] copying package.xml -> /home/robot/word/install/warehourse_tasks/share/warehourse_tasks
+[1.162s] running install_egg_info
+[1.162s] Copying ../../build/warehourse_tasks/warehourse_tasks.egg-info to /home/robot/word/install/warehourse_tasks/lib/python3.10/site-packages/warehourse_tasks-0.0.0-py3.10.egg-info
+[1.163s] running install_scripts
+[1.178s] writing list of installed files to '/home/robot/word/build/warehourse_tasks/install.log'
+[1.198s] Invoked command in '/home/robot/word/src/warehourse_tasks' returned '0': PYTHONPATH=/home/robot/word/build/warehourse_tasks/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robot/word/install/warehourse_tasks/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/warehourse_tasks build --build-base /home/robot/word/build/warehourse_tasks/build install --record /home/robot/word/build/warehourse_tasks/install.log --install-scripts $base/lib/warehourse_tasks --single-version-externally-managed install_data --force

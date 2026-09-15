@@ -1,0 +1,28 @@
+[0.739s] Invoking command in '/home/robot/word/build/warehouse_bringup': PYTHONPATH=/home/robot/word/build/warehouse_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/robot/word/build/warehouse_bringup/build
+[0.896s] running develop
+[0.984s] Removing /home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages/warehouse-bringup.egg-link (link to .)
+[1.012s] Invoked command in '/home/robot/word/build/warehouse_bringup' returned '0': PYTHONPATH=/home/robot/word/build/warehouse_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/robot/word/build/warehouse_bringup/build
+[1.013s] Invoking command in '/home/robot/word/src/warehouse_bringup': PYTHONPATH=/home/robot/word/build/warehouse_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/warehouse_bringup build --build-base /home/robot/word/build/warehouse_bringup/build install --record /home/robot/word/build/warehouse_bringup/install.log --install-scripts $base/lib/warehouse_bringup --single-version-externally-managed install_data --force
+[1.156s] running egg_info
+[1.157s] writing ../../build/warehouse_bringup/warehouse_bringup.egg-info/PKG-INFO
+[1.158s] writing dependency_links to ../../build/warehouse_bringup/warehouse_bringup.egg-info/dependency_links.txt
+[1.158s] writing entry points to ../../build/warehouse_bringup/warehouse_bringup.egg-info/entry_points.txt
+[1.158s] writing requirements to ../../build/warehouse_bringup/warehouse_bringup.egg-info/requires.txt
+[1.159s] writing top-level names to ../../build/warehouse_bringup/warehouse_bringup.egg-info/top_level.txt
+[1.160s] reading manifest file '../../build/warehouse_bringup/warehouse_bringup.egg-info/SOURCES.txt'
+[1.161s] writing manifest file '../../build/warehouse_bringup/warehouse_bringup.egg-info/SOURCES.txt'
+[1.161s] running build
+[1.161s] running build_py
+[1.162s] running install
+[1.162s] running install_lib
+[1.163s] creating /home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages/warehouse_bringup
+[1.163s] copying /home/robot/word/build/warehouse_bringup/build/lib/warehouse_bringup/__init__.py -> /home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages/warehouse_bringup
+[1.164s] byte-compiling /home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages/warehouse_bringup/__init__.py to __init__.cpython-310.pyc
+[1.164s] running install_data
+[1.165s] copying resource/warehouse_bringup -> /home/robot/word/install/warehouse_bringup/share/ament_index/resource_index/packages
+[1.166s] copying package.xml -> /home/robot/word/install/warehouse_bringup/share/warehouse_bringup
+[1.166s] running install_egg_info
+[1.168s] Copying ../../build/warehouse_bringup/warehouse_bringup.egg-info to /home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages/warehouse_bringup-0.0.0-py3.10.egg-info
+[1.172s] running install_scripts
+[1.184s] writing list of installed files to '/home/robot/word/build/warehouse_bringup/install.log'
+[1.217s] Invoked command in '/home/robot/word/src/warehouse_bringup' returned '0': PYTHONPATH=/home/robot/word/build/warehouse_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robot/word/install/warehouse_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/warehouse_bringup build --build-base /home/robot/word/build/warehouse_bringup/build install --record /home/robot/word/build/warehouse_bringup/install.log --install-scripts $base/lib/warehouse_bringup --single-version-externally-managed install_data --force

@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"
+       name="warehouse_robot">
+
+  <xacro:property name="body_l" value="0.60"/>
+  <xacro:property name="body_w" value="0.45"/>
+  <xacro:property name="body_h" value="0.25"/>
+  <xacro:property name="wheel_r" value="0.08"/>
+  <xacro:property name="wheel_w" value="0.04"/>
+  <xacro:property name="wheel_track" value="0.42"/>
+
+  <material name="blue">
+    <color rgba="0.1 0.3 0.8 1.0"/>
+  </material>
+
+  <material name="black">
+    <color rgba="0.05 0.05 0.05 1.0"/>
+  </material>
+
+  <material name="red">
+    <color rgba="0.8 0.1 0.1 1.0"/>
+  </material>
+
+  <!-- 机器人主体 -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 ${body_h / 2.0}"/>
+      <geometry>
+        <box size="${body_l} ${body_w} ${body_h}"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 ${body_h / 2.0}"/>
+      <geometry>
+        <box size="${body_l} ${body_w} ${body_h}"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz="0 0 ${body_h / 2.0}"/>
+      <mass value="20.0"/>
+      <inertia ixx="1.0" ixy="0" ixz="0"
+               iyy="1.0" iyz="0"
+               izz="1.0"/>
+    </inertial>
+  </link>
+
+  <!-- 左驱动轮 -->
+  <link name="left_wheel_link">
+    <visual>
+      <origin xyz="0 0 0"/>
+      <geometry>
+        <cylinder radius="${wheel_r}" length="${wheel_w}"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="${wheel_r}" length="${wheel_w}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="left_wheel_link">
+  <material>Gazebo/Black</material>
+  </gazebo>
+
+  <joint name="left_wheel_joint"
+         type="continuous">
+    <parent link="base_link"/>
+    <child link="left_wheel_link"/>
+    <origin xyz="0 0.25 0.08"
+            rpy="1.5708 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <!-- 右驱动轮 -->
+  <link name="right_wheel_link">
+    <visual>
+      <geometry>
+        <cylinder radius="${wheel_r}" length="${wheel_w}"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="${wheel_r}" length="${wheel_w}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="right_wheel_link">
+  <material>Gazebo/Black</material>
+  </gazebo>
+
+  <joint name="right_wheel_joint"
+         type="continuous">
+    <parent link="base_link"/>
+    <child link="right_wheel_link"/>
+    <origin xyz="0 -0.25 0.08"
+            rpy="1.5708 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <!-- 支撑轮 -->
+  <link name="caster_wheel_link">
+    <visual>
+      <geometry>
+        <sphere radius="0.04"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.04"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="caster_wheel_link">
+  <material>Gazebo/Black</material>
+  </gazebo>
+
+  <joint name="caster_wheel_joint"
+         type="fixed">
+    <parent link="base_link"/>
+    <child link="caster_wheel_link"/>
+    <origin xyz="-0.22 0 0.04"/>
+  </joint>
+
+  <!-- 激光雷达 -->
+  <link name="laser_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.05" length="0.06"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <joint name="laser_joint"
+         type="fixed">
+    <parent link="base_link"/>
+    <child link="laser_link"/>
+    <origin xyz="0.20 0 0.30"/>
+  </joint>
+
+  <!-- IMU -->
+  <link name="imu_link">
+    <visual>
+      <geometry>
+        <box size="0.06 0.04 0.02"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <joint name="imu_joint"
+         type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin xyz="0 0 0.20"/>
+  </joint>
+
+</robot>

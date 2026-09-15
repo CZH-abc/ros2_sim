@@ -1,0 +1,1 @@
+/home/robot/word/build/warehouse_gazebo/ament_cmake_core/warehouse_gazeboConfig-version.cmake

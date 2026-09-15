@@ -1,0 +1,4 @@
+Invoking command in '/home/robot/word/build/warehouse_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/robot/word/build/warehouse_gazebo -- -j2 -l2
+Invoked command in '/home/robot/word/build/warehouse_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/robot/word/build/warehouse_gazebo -- -j2 -l2
+Invoking command in '/home/robot/word/build/warehouse_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/robot/word/build/warehouse_gazebo
+Invoked command in '/home/robot/word/build/warehouse_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/robot/word/build/warehouse_gazebo

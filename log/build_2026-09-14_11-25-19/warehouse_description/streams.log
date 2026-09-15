@@ -1,0 +1,47 @@
+[0.013s] Invoking command in '/home/robot/word/build/warehouse_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/robot/word/src/warehouse_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/robot/word/install/warehouse_description
+[0.019s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.120s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.126s] -- Found xacro: 2.1.1 (/opt/ros/humble/share/xacro/cmake)
+[0.127s] -- Found robot_state_publisher: 3.0.3 (/opt/ros/humble/share/robot_state_publisher/cmake)
+[0.148s] -- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.152s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.154s] -- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.161s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.171s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.199s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.200s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.218s] -- Found rmw_implementation_cmake: 6.1.3 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.219s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.297s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.391s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.437s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.437s] -- Added test 'lint_cmake' to check CMake code style
+[0.437s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.438s] -- Added test 'xmllint' to check XML markup files
+[0.439s] -- Configuring done
+[0.447s] -- Generating done
+[0.450s] -- Build files have been written to: /home/robot/word/build/warehouse_description
+[0.458s] Invoked command in '/home/robot/word/build/warehouse_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/robot/word/src/warehouse_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/robot/word/install/warehouse_description
+[0.459s] Invoking command in '/home/robot/word/build/warehouse_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/robot/word/build/warehouse_description -- -j2 -l2
+[0.494s] Invoked command in '/home/robot/word/build/warehouse_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/robot/word/build/warehouse_description -- -j2 -l2
+[0.494s] Invoking command in '/home/robot/word/build/warehouse_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/robot/word/build/warehouse_description
+[0.501s] -- Install configuration: ""
+[0.501s] -- Execute custom install script
+[0.502s] -- Symlinking: /home/robot/word/install/warehouse_description/share/warehouse_description/urdf/warehouse_robot.urdf.xacro
+[0.510s] -- Symlinking: /home/robot/word/install/warehouse_description/share/warehouse_description/launch/display.launch.py
+[0.518s] -- Symlinking: /home/robot/word/install/warehouse_description/share/ament_index/resource_index/package_run_dependencies/warehouse_description
+[0.525s] -- Symlinking: /home/robot/word/install/warehouse_description/share/ament_index/resource_index/parent_prefix_path/warehouse_description
+[0.533s] -- Symlinking: /home/robot/word/install/warehouse_description/share/warehouse_description/environment/ament_prefix_path.sh
+[0.540s] -- Symlinking: /home/robot/word/install/warehouse_description/share/warehouse_description/environment/ament_prefix_path.dsv
+[0.547s] -- Symlinking: /home/robot/word/install/warehouse_description/share/warehouse_description/environment/path.sh
+[0.553s] -- Symlinking: /home/robot/word/install/warehouse_description/share/warehouse_description/environment/path.dsv
+[0.560s] -- Symlinking: /home/robot/word/install/warehouse_description/share/warehouse_description/local_setup.bash
+[0.568s] -- Symlinking: /home/robot/word/install/warehouse_description/share/warehouse_description/local_setup.sh
+[0.575s] -- Symlinking: /home/robot/word/install/warehouse_description/share/warehouse_description/local_setup.zsh
+[0.582s] -- Symlinking: /home/robot/word/install/warehouse_description/share/warehouse_description/local_setup.dsv
+[0.590s] -- Symlinking: /home/robot/word/install/warehouse_description/share/warehouse_description/package.dsv
+[0.597s] -- Symlinking: /home/robot/word/install/warehouse_description/share/ament_index/resource_index/packages/warehouse_description
+[0.606s] -- Symlinking: /home/robot/word/install/warehouse_description/share/warehouse_description/cmake/warehouse_descriptionConfig.cmake
+[0.615s] -- Symlinking: /home/robot/word/install/warehouse_description/share/warehouse_description/cmake/warehouse_descriptionConfig-version.cmake
+[0.622s] -- Symlinking: /home/robot/word/install/warehouse_description/share/warehouse_description/package.xml
+[0.631s] Invoked command in '/home/robot/word/build/warehouse_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/robot/word/build/warehouse_description
