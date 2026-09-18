@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="warehouse_stage1">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <physics type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+    <!-- 仓库外墙：一圈 0.1m 厚、1.2m 高的静态箱体 -->
+    <model name="walls">
+      <static>true</static>
+      <link name="wall_north">
+        <pose>0 6 0.6 0 0 0</pose>
+        <collision name="c"><geometry><box><size>12.0 0.1 1.2</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>12.0 0.1 1.2</size></box></geometry>
+          <material><script><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+      <link name="wall_south">
+        <pose>0 -6 0.6 0 0 0</pose>
+        <collision name="c"><geometry><box><size>12.0 0.1 1.2</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>12.0 0.1 1.2</size></box></geometry>
+          <material><script><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+      <link name="wall_east">
+        <pose>6 0 0.6 0 0 0</pose>
+        <collision name="c"><geometry><box><size>0.1 12.0 1.2</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.1 12.0 1.2</size></box></geometry>
+          <material><script><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+      <link name="wall_west">
+        <pose>-6 0 0.6 0 0 0</pose>
+        <collision name="c"><geometry><box><size>0.1 12.0 1.2</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.1 12.0 1.2</size></box></geometry>
+          <material><script><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+
+    <!-- 两排货架，中间留 1.2m 通道供小车通过 -->
+    <model name="shelf_row_a">
+      <static>true</static>
+      <link name="shelf_1">
+        <pose>-3.0 2.0 0.9 0 0 0</pose>
+        <collision name="c"><geometry><box><size>2.0 0.6 1.8</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>2.0 0.6 1.8</size></box></geometry>
+          <material><script><name>Gazebo/Orange</name></script></material></visual>
+      </link>
+      <link name="shelf_2">
+        <pose>0.0 2.0 0.9 0 0 0</pose>
+        <collision name="c"><geometry><box><size>2.0 0.6 1.8</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>2.0 0.6 1.8</size></box></geometry>
+          <material><script><name>Gazebo/Orange</name></script></material></visual>
+      </link>
+      <link name="shelf_3">
+        <pose>3.0 2.0 0.9 0 0 0</pose>
+        <collision name="c"><geometry><box><size>2.0 0.6 1.8</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>2.0 0.6 1.8</size></box></geometry>
+          <material><script><name>Gazebo/Orange</name></script></material></visual>
+      </link>
+    </model>
+
+    <model name="shelf_row_b">
+      <static>true</static>
+      <link name="shelf_1">
+        <pose>-3.0 -2.0 0.9 0 0 0</pose>
+        <collision name="c"><geometry><box><size>2.0 0.6 1.8</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>2.0 0.6 1.8</size></box></geometry>
+          <material><script><name>Gazebo/Blue</name></script></material></visual>
+      </link>
+      <link name="shelf_2">
+        <pose>0.0 -2.0 0.9 0 0 0</pose>
+        <collision name="c"><geometry><box><size>2.0 0.6 1.8</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>2.0 0.6 1.8</size></box></geometry>
+          <material><script><name>Gazebo/Blue</name></script></material></visual>
+      </link>
+      <link name="shelf_3">
+        <pose>3.0 -2.0 0.9 0 0 0</pose>
+        <collision name="c"><geometry><box><size>2.0 0.6 1.8</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>2.0 0.6 1.8</size></box></geometry>
+          <material><script><name>Gazebo/Blue</name></script></material></visual>
+      </link>
+    </model>
+  </world>
+</sdf>

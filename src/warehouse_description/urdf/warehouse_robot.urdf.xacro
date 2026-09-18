@@ -6,7 +6,7 @@
   <xacro:property name="body_h" value="0.25"/>
   <xacro:property name="wheel_r" value="0.08"/>
   <xacro:property name="wheel_w" value="0.04"/>
-  <xacro:property name="wheel_track" value="0.42"/>
+  <xacro:property name="wheel_track" value="0.50"/>
   <material name="blue">
     <color rgba="0.1 0.3 0.8 1.0"/>
   </material>
@@ -63,13 +63,15 @@
   </link>
   <gazebo reference="left_wheel_link">
   <material>Gazebo/Black</material>
+  <mu1>1.5</mu1>
+  <mu2>1.5</mu2>
   </gazebo>
   <joint name="left_wheel_joint"
          type="continuous">
     <parent link="base_link"/>
     <child link="left_wheel_link"/>
-    <origin xyz="0.10 0.25 0.18"
-            rpy="1.5708 0 0"/>
+    <origin xyz="0.10 ${wheel_track / 2.0} 0.18"
+            rpy="-1.5708 0 0"/>
     <axis xyz="0 0 1"/>
   </joint>
   <!-- 右驱动轮 -->
@@ -95,13 +97,15 @@
   </link>
   <gazebo reference="right_wheel_link">
   <material>Gazebo/Black</material>
+  <mu1>1.5</mu1>
+  <mu2>1.5</mu2>
   </gazebo>
   <joint name="right_wheel_joint"
          type="continuous">
     <parent link="base_link"/>
     <child link="right_wheel_link"/>
-    <origin xyz="0.10 -0.25 0.18"
-            rpy="1.5708 0 0"/>
+    <origin xyz="0.10 -${wheel_track / 2.0} 0.18"
+            rpy="-1.5708 0 0"/>
     <axis xyz="0 0 1"/>
   </joint>
   <!-- 支撑轮 -->
@@ -127,6 +131,8 @@
   </link>
   <gazebo reference="caster_wheel_link">
   <material>Gazebo/Black</material>
+  <mu1>0.001</mu1>
+  <mu2>0.001</mu2>
   </gazebo>
   <joint name="caster_wheel_joint"
          type="fixed">
@@ -164,4 +170,36 @@
     <child link="imu_link"/>
     <origin xyz="0 0 0.30"/>
   </joint>
+
+  <!-- Gazebo 不读 URDF 的 material，需要单独指定预置材质 -->
+  <gazebo reference="base_link">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+  <gazebo reference="laser_link">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  <gazebo reference="imu_link">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <!-- 差速驱动：订阅 cmd_vel，发布 odom 并广播 odom -> base_link -->
+  <gazebo>
+    <plugin name="warehouse_diff_drive" filename="libgazebo_ros_diff_drive.so">
+      <update_rate>30.0</update_rate>
+      <left_joint>left_wheel_joint</left_joint>
+      <right_joint>right_wheel_joint</right_joint>
+      <wheel_separation>${wheel_track}</wheel_separation>
+      <wheel_diameter>${2 * wheel_r}</wheel_diameter>
+      <max_wheel_torque>30.0</max_wheel_torque>
+      <max_wheel_acceleration>2.0</max_wheel_acceleration>
+      <command_topic>cmd_vel</command_topic>
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <publish_wheel_tf>false</publish_wheel_tf>
+      <odometry_topic>odom</odometry_topic>
+      <odometry_source>world</odometry_source>
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_link</robot_base_frame>
+    </plugin>
+  </gazebo>
 </robot>
