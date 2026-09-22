@@ -2,7 +2,7 @@ import os
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
+from launch.actions import DeclareLaunchArgument, ExecuteProcess
 from launch.substitutions import Command, LaunchConfiguration
 from launch_ros.actions import Node
 
@@ -31,17 +31,19 @@ def generate_launch_description():
             }],
         ),
 
-        Node(
-            package="gazebo_ros",
-            executable="gzserver",
+        # gzserver/gzclient 是 Gazebo 自带的系统二进制（/usr/bin），不在 gazebo_ros 的
+        # libexec 目录里，所以必须用 ExecuteProcess 调，不能用 Node(package="gazebo_ros")
+        ExecuteProcess(
+            cmd=["gzserver",
+                 "-s", "libgazebo_ros_init.so",
+                 "-s", "libgazebo_ros_factory.so",
+                 LaunchConfiguration("world")],
             output="screen",
-            arguments=["-s", "libgazebo_ros_factory.so",
-                       LaunchConfiguration("world")],
         ),
 
-        Node(
-            package="gazebo_ros",
-            executable="gzclient",
+        ExecuteProcess(
+            cmd=["gzclient"],
+            output="screen",
         ),
 
         Node(
