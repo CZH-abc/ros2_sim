@@ -40,10 +40,12 @@ def generate_launch_description():
                               description="false = 不开 RViz 窗口"),
 
         # ---------- 第一层：定位（我在哪） ----------
+        # yaml_filename 必须走 parameters，不能当位置参数传（arguments 里只放 -r/--remap 这类）
         Node(package="nav2_map_server", executable="map_server", name="map_server",
-             arguments=[map_yaml], **common),
+             output="screen",
+             parameters=[nav2_params, {"yaml_filename": map_yaml}]),
         Node(package="nav2_amcl", executable="amcl", name="amcl", **common),
-        Node(package="nav2_lifecycle_manager", executable="nav2_lifecycle_manager",
+        Node(package="nav2_lifecycle_manager", executable="lifecycle_manager",
              name="lifecycle_manager_map", output="screen",
              parameters=[nav2_params, {"autostart": True}]),
 
@@ -63,7 +65,7 @@ def generate_launch_description():
              name="bt_navigator", **common),
         Node(package="nav2_waypoint_follower", executable="waypoint_follower",
              name="waypoint_follower", **common),
-        Node(package="nav2_lifecycle_manager", executable="nav2_lifecycle_manager",
+        Node(package="nav2_lifecycle_manager", executable="lifecycle_manager",
              name="lifecycle_manager_navigation", output="screen",
              parameters=[nav2_params, {"autostart": True}]),
 

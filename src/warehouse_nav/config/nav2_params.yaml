@@ -204,7 +204,7 @@ planner_server:
     planner_plugins: [GridBased]
     GridBased:
       # NavFn：网格上算最短距离场，静态仓库地图用它最稳
-      plugin: nav2_navfn_planner::NavfnPlanner
+      plugin: nav2_navfn_planner/NavfnPlanner
       tolerance: 0.5
       use_astar: False
       allow_unknown: True
