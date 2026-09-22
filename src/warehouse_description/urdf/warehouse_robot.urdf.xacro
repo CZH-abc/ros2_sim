@@ -163,6 +163,15 @@
       </geometry>
       <material name="red"/>
     </visual>
+    <!-- 不写 inertial 时 Gazebo 按视觉体积+密度 1 推出 4.8e-5 kg，与 20 kg 车身差 40 万倍，
+         这个 link 在物理引擎里等于不存在，IMU 传感器于是永远不发数据（发布者有、零帧） -->
+    <inertial>
+      <origin xyz="0 0 0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0.0000083" ixy="0" ixz="0"
+               iyy="0.0000167" iyz="0"
+               izz="0.0000217"/>
+    </inertial>
   </link>
   <joint name="imu_joint"
          type="fixed">
