@@ -1,0 +1,294 @@
+# Nav2 全部节点的参数都写在这一个文件里。
+# 规则：文件顶格的第一层是"节点名"，第二层必须是 ros__parameters，第三层才是真参数。
+# 节点名写错不会报错，只会让这一整块参数被静默丢弃 —— 排障时先怀疑这里。
+#
+# 阶段 4 运行时 slam_toolbox 必须停掉：AMCL 和它都要发 map -> odom 这条 tf，
+# 一个 tf 边只能有一个发布者，两个同时发会让车在 RViz 里乱跳。
+
+amcl:
+  ros__parameters:
+    use_sim_time: True
+    # 坐标系：和 slam_toolbox 阶段用的完全一致，换定位不换坐标系
+    odom_frame_id: odom
+    base_frame_id: base_link
+    global_frame_id: map
+
+    # 雷达规格必须和 xacro 里一致，否则会把 0.12 m 内的无效读数当成有效墙点
+    laser_min_range: 0.12
+    laser_max_range: 8.0
+    laser_model_type: likelihood_field
+    laser_sigma_change: 1.0
+    laser_sample_ratio: 1.0
+    max_laser_dist: 12.0
+
+    # 差速车模型：只有前进/转向，不能横移，和我们的驱动插件一致
+    robot_model_type: nav2_amcl::DifferentialMotionModel
+    # 里程计误差模型，四个数都是"比例噪声"：走得越快/转得越多，猜得越不准
+    alpha1: 0.2
+    alpha2: 0.2
+    alpha3: 0.2
+    alpha4: 0.2
+    alpha5: 0.2
+
+    # 粒子云：5000 个候选位姿，够 12x12 的场子用，虚拟机也扛得住
+    max_particles: 2000
+    min_particles: 500
+
+    # 车走 0.2 m 或转 0.2 rad 才重新算一次粒子，太频繁费 CPU
+    update_min_d: 0.20
+    update_min_a: 0.20
+    resample_interval: 1
+
+    transform_tolerance: 1.0
+    # tf 超时：仿真时钟偶尔会跳，放宽到 1.0 秒，否则会刷一屏 "TF timestamp older"
+    # 初次启动假定车在出生点，别把粒子撒满整个地图
+    # 仿真重启后车一定在出生点 (0, -4)，所以直接给定初始位姿，
+    # 省掉在 RViz 里手动点 "2D Pose Estimate" 那一步
+    set_initial_pose: True
+    initial_pose.x: 0.0
+    initial_pose.y: -4.0
+    initial_pose.z: 0.0
+    initial_pose.yaw: 0.0
+
+map_server:
+  ros__parameters:
+    use_sim_time: True
+    # 地图话题名保持默认的 map，global_costmap 的 static_layer 就是订阅它
+    topic_name: map
+
+lifecycle_manager_map:
+  ros__parameters:
+    use_sim_time: True
+    # 这两个节点必须按顺序拉起：先有地图，AMCL 才能对着它定位
+    node_names: ['map_server', 'amcl']
+    bond_timeout: 4.0
+    react_for_namespace: False
+
+controller_server:
+  ros__parameters:
+    use_sim_time: True
+    # 20 Hz：控制环每秒算 20 次 cmd_vel。驱动插件 update_rate 是 30，跟得上
+    controller_frequency: 20.0
+    # 小于这个阈值的速度直接当 0 发，防止车在原地抖动
+    min_x_velocity_threshold: 0.001
+    min_y_velocity_threshold: 0.5
+    min_theta_velocity_threshold: 0.001
+    failure_tolerance: 0.3
+
+    progress_checker_plugin: progress_checker
+    goal_checker_plugins: [general_goal_checker]
+    controller_plugins: [FollowPath]
+
+    # 进度检查：15 秒内必须至少挪动 0.5 m，否则判定"卡住了"，交给恢复行为
+    progress_checker:
+      plugin: nav2_controller::SimpleProgressChecker
+      required_movement_radius: 0.5
+      movement_time_allowance: 15.0
+
+    general_goal_checker:
+      stateful: True
+      plugin: nav2_controller::SimpleGoalChecker
+      # 到点判定：离目标 25 cm 内、朝向差 15 度内就算到达。仓库取货不需要毫米级
+      xy_goal_tolerance: 0.25
+      yaw_goal_tolerance: 0.2618
+
+    FollowPath:
+      # regulated pure pursuit：沿路径走，转弯时自动减速，比 PID 适合差速车
+      plugin: nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController
+      # 直线巡航速度 0.2 m/s —— 就是阶段 1 标定时用的那个速度，特性已知
+      desired_linear_vel: 0.2
+      max_allowed_linear_vel: 0.25
+      lookahead_time: 1.5
+      lookahead_dist: 0.6
+      min_lookahead_dist: 0.30
+      max_lookahead_dist: 0.90
+      # 转向上限 0.5 rad/s，同样是阶段 1 验证过的值，别调高，插件会饱和
+      max_allowed_angular_vel: 0.6
+      rotate_to_heading_angular_vel: 0.5
+      use_rotate_to_heading: True
+      rotate_to_heading_min_angle: 0.6
+      allow_reversing: False
+      approach_velocity_scaling_dist: 0.6
+      min_approach_linear_velocity: 0.05
+      # 转弯半径小于 0.9 m 时按比例减速，防止货架通道里甩尾撞架
+      use_regulated_linear_velocity_scaling: True
+      regulated_linear_scaling_min_radius: 0.9
+      regulated_linear_scaling_min_speed: 0.10
+      use_collision_detection: True
+      max_allowed_time_to_collision_up_to_carrot: 1.0
+      transform_tolerance: 1.0
+      max_robot_pose_search_dist: 10.0
+
+local_costmap:
+  local_costmap:
+    ros__parameters:
+      use_sim_time: True
+      update_frequency: 5.0
+      publish_frequency: 2.0
+      global_frame: odom
+      robot_base_frame: base_link
+      rolling_window: True
+      width: 4
+      height: 4
+      resolution: 0.05
+      # 车体 0.60 x 0.45，外接圆半径 sqrt(0.3^2 + 0.25^2) = 0.39，取 0.40
+      robot_radius: 0.40
+      transform_tolerance: 1.0
+      plugins: [obstacle_layer, inflation_layer]
+      obstacle_layer:
+        plugin: nav2_costmap_2d::ObstacleLayer
+        enabled: True
+        observation_sources: scan
+        scan:
+          topic: /scan
+          # 激光一帧进来就打点，不做时间平均，转弯时才不会糊成一片
+          observation_persistence: 0.0
+          max_obstacle_height: 2.0
+          raytrace_max_range: 4.0
+          obstacle_max_range: 3.5
+          data_type: LaserScan
+          clearing: True
+          marking: True
+          inf_is_valid: True
+      inflation_layer:
+        plugin: nav2_costmap_2d::InflationLayer
+        # 代价膨胀 0.55 m：车半径 0.40 + 15 cm 余量，规划器会自动离墙远一点
+        cost_scaling_factor: 3.0
+        inflation_radius: 0.55
+
+global_costmap:
+  global_costmap:
+    ros__parameters:
+      use_sim_time: True
+      update_frequency: 1.0
+      publish_frequency: 1.0
+      global_frame: map
+      robot_base_frame: base_link
+      rolling_window: False
+      resolution: 0.05
+      # 12 x 12 是照着我们那个 12 m 见方的世界写的。
+      # 存完地图后一定要看一眼 warehouse_map.yaml 里的 resolution 和 origin：
+      # 若 slam_toolbox 存出来的实际边长超过 12（例如 12.5），把下面两个数改大，
+      # 否则地图边缘的墙会被裁掉，规划器会以为出了地图就是自由空间。
+      width: 12
+      height: 12
+      always_send_full_costmap: True
+      robot_radius: 0.40
+      transform_tolerance: 1.0
+      plugins: [static_layer, obstacle_layer, inflation_layer]
+      static_layer:
+        plugin: nav2_costmap_2d::StaticLayer
+        map_subscribe_transient_local: True
+      obstacle_layer:
+        plugin: nav2_costmap_2d::ObstacleLayer
+        enabled: True
+        observation_sources: scan
+        scan:
+          topic: /scan
+          max_obstacle_height: 2.0
+          obstacle_max_range: 8.0
+          raytrace_max_range: 8.0
+          data_type: LaserScan
+          clearing: True
+          marking: True
+          inf_is_valid: True
+      inflation_layer:
+        plugin: nav2_costmap_2d::InflationLayer
+        cost_scaling_factor: 3.0
+        inflation_radius: 0.55
+
+planner_server:
+  ros__parameters:
+    use_sim_time: True
+    expected_planner_frequency: 1.0
+    planner_plugins: [GridBased]
+    GridBased:
+      # NavFn：网格上算最短距离场，静态仓库地图用它最稳
+      plugin: nav2_navfn_planner::NavfnPlanner
+      tolerance: 0.5
+      use_astar: False
+      allow_unknown: True
+
+smoother_server:
+  ros__parameters:
+    use_sim_time: True
+    smoother_plugins: [simple_smoother]
+    simple_smoother:
+      plugin: nav2_smoother::SimpleSmoother
+      tolerance: 1.0e-5
+      max_its: 1000
+      do_reflection: True
+
+behavior_server:
+  ros__parameters:
+    use_sim_time: True
+    # 恢复行为读的是局部代价地图（在 odom 系下），不是全局地图
+    costmap_topic: local_costmap/costmap_raw
+    footprint_topic: local_costmap/published_footprint
+    cycle_frequency: 10.0
+    # spin = 原地转；backup = 后退一点；wait = 停着等 1.5 秒
+    # 规划器卡住时行为树会依次试这三个
+    behavior_plugins: [spin, backup, drive_on_heading, wait]
+    spin:
+      plugin: nav2_behaviors/Spin
+    backup:
+      plugin: nav2_behaviors/BackUp
+    drive_on_heading:
+      plugin: nav2_behaviors/DriveOnHeading
+    wait:
+      plugin: nav2_behaviors/Wait
+    global_frame: odom
+    robot_base_frame: base_link
+    transform_tolerance: 1.0
+    # 执行动作前先"预演"这么久，撞了就换一个行为
+    simulate_ahead_time: 1.0
+    max_rotational_vel: 0.5
+    min_rotational_vel: 0.3
+    rotational_acc_lim: 2.0
+
+bt_navigator:
+  ros__parameters:
+    use_sim_time: True
+    global_frame: map
+    robot_base_frame: base_link
+    odom_topic: /odom
+    bt_loop_duration: 10
+    default_server_timeout: 20
+    navigators: [navigate_to_pose, navigate_through_poses]
+    navigate_to_pose:
+      plugin: nav2_bt_navigator::NavigateToPoseNavigator
+    navigate_through_poses:
+      plugin: nav2_bt_navigator::NavigateThroughPosesNavigator
+    # 故意不写 plugin_lib_names 和 default_nav_to_pose_bt_xml：
+    # 留空时 bt_navigator 用它编译进去的默认清单和默认行为树，最省事也最不容易崩。
+    # 以后要定制行为树时，再把这两项加回来。
+
+waypoint_follower:
+  ros__parameters:
+    use_sim_time: True
+    loop_rate: 20
+    stop_on_failure: False
+    waypoint_task_executor_plugin: wait_at_waypoint
+    wait_at_waypoint:
+      plugin: nav2_waypoint_follower::WaitAtWaypoint
+      enabled: True
+      waypoint_pause_duration: 200
+
+# 故意没有 velocity_smoother：那样 controller_server 要把输出改名 cmd_vel_nav，
+# 再由 smoother 转成 cmd_vel，多一层就多一个崩点。
+# 我们的 desired_linear_vel 本来就等于阶段 1 标定过的安全速度，不需要再限一次。
+
+lifecycle_manager_navigation:
+  ros__parameters:
+    use_sim_time: True
+    # 激活顺序就是启动顺序：控制器（连带两个代价地图）-> 平滑 -> 规划 -> 恢复行为 -> 行为树
+    # 任何一行节点起不来，整个导航栈会停在一半，日志里最后一行 "Managed nodes are active" 才是成功
+    node_names:
+      - controller_server
+      - smoother_server
+      - planner_server
+      - behavior_server
+      - bt_navigator
+      - waypoint_follower
+    bond_timeout: 4.0
+    attempt_respawn_reconnection: True

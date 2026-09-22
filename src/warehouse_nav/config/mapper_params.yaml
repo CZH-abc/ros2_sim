@@ -1,0 +1,40 @@
+slam_toolbox:
+  ros__parameters:
+    # 坐标系：map 是地图（世界）系，odom 是短期连续的里程计系，base_frame 是小车
+    odom_frame: odom
+    map_frame: map
+    base_frame: base_link
+
+    # slam_toolbox 只认这一条话题，消息类型必须是 sensor_msgs/msg/LaserScan
+    scan_topic: /scan
+
+    # mapping = 边跑边建图；localization = 拿已有地图只定位不建图（阶段 4 会用到）
+    mode: mapping
+
+    solver_plugin: solver_plugins::CeresSolver
+
+    # 地图格子边长（米）。0.05 = 20 cm 厚的墙在图上是 1 格，够看清货架间距 1.2 m 的通道
+    resolution: 0.05
+
+    # 这两项必须和雷达的物理规格一致，否则会把无效读数当成墙
+    min_laser_range: 0.12
+    max_laser_range: 8.0
+
+    # 每 1 秒重画一次 /map，太频繁会拖慢虚拟机
+    map_update_interval: 1.0
+
+    # 车每走 0.3 m 或转 15 度才插入一个新位姿节点。默认 0.5 m 对 12 m 的场子太粗
+    minimum_travel_distance: 0.3
+    minimum_travel_heading: 0.2618
+
+    # 不丢帧：雷达 10 Hz，throttle_scans=2 就变成 5 Hz，快速转弯时会跟不上
+    throttle_scans: 1
+
+    # map->odom 这条 tf 的广播周期，0.05 = 20 Hz
+    transform_publish_period: 0.05
+
+    # 存地图时用自己的 /slam_toolbox/save_map，不去调 nav2 的 map_server。
+    # 默认是 true，但我们阶段 3 根本没起 map_server 节点，
+    # 存图会静默失败（日志里一句 "Failed to call save_map"），所以必须关掉。
+    use_map_saver: false
+    debug_logging: false

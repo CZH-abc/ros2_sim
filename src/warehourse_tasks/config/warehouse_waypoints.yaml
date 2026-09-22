@@ -1,0 +1,66 @@
+# 阶段 5：仓库拣货路线。
+#
+# 坐标系：这里的 x/y 是 map 系（也就是 RViz 里那张地图的坐标），不是 Gazebo 世界系。
+# 我们的地图是从 odom 对齐世界出生的那一刻建起来的，两者刚好重合，
+# 所以数值上和 world 文件里的坐标一样。换了地图就要重新核对。
+#
+# 怎么核对某个点能不能停：
+#   ros2 run tf2_ros tf2_echo map base_link      # 手推车开到位，看读数对不对
+#   RViz 里 Global Plan 变绿线，说明 Nav2 认这条路径
+#
+# yaw 是弧度：0 = 朝 +x（东），1.5708 = 朝 +y（北），-1.5708 = 朝 -y（南），3.1416 = 朝 -x（西）
+# dwell_sec = 到了这个点停几秒，模拟"扫码/取货"，0 = 不停直接走
+
+loop: false
+
+waypoints:
+  - name: aisle_west_south
+    x: -4.90
+    y: -4.00
+    yaw: 1.5708
+    dwell_sec: 0.0
+
+  - name: aisle_west_north
+    x: -4.90
+    y: 0.00
+    yaw: 1.5708
+    dwell_sec: 0.0
+
+  # 货架 A 排（y 正方向那排）第一个货位：站在中间通道，车头朝北对着货架
+  - name: pick_a_1
+    x: -3.00
+    y: 0.00
+    yaw: 1.5708
+    dwell_sec: 3.0
+
+  - name: pick_a_2
+    x: 3.00
+    y: 0.00
+    yaw: 1.5708
+    dwell_sec: 3.0
+
+  - name: aisle_east_north
+    x: 4.90
+    y: 0.00
+    yaw: -1.5708
+    dwell_sec: 0.0
+
+  # 货架 B 排第一个货位：从东头绕回来，车头朝南
+  - name: pick_b_1
+    x: 3.00
+    y: -1.00
+    yaw: -1.5708
+    dwell_sec: 3.0
+
+  - name: aisle_east_south
+    x: 4.90
+    y: -4.00
+    yaw: -1.5708
+    dwell_sec: 0.0
+
+  # 回充电桩/出发点
+  - name: dock
+    x: 0.00
+    y: -4.00
+    yaw: 0.0
+    dwell_sec: 0.0

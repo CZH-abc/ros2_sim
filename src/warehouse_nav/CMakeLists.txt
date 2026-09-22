@@ -11,6 +11,13 @@ find_package(ament_cmake REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
+# launch/ config/ maps/ 都是纯配置文件，没有可编译代码，唯一要做的就是拷进 share/
+# 不写这段的话 ros2 launch 会报 "no launch file named ..." —— 包编译"成功"但什么也没有
+install(
+  DIRECTORY launch config maps
+  DESTINATION share/${PROJECT_NAME}
+)
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights

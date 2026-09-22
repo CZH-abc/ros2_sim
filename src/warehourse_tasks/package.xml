@@ -3,9 +3,21 @@
 <package format="3">
   <name>warehourse_tasks</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>仓库任务调度：按路线依次调用 Nav2 的 navigate_to_pose</description>
   <maintainer email="robot@todo.todo">robot</maintainer>
-  <license>TODO: License declaration</license>
+  <license>Apache-2.0</license>
+
+  <!-- 运行时要装的包。ament_python 编译期什么都不查，所以这里全是 exec_depend；
+       写它们的价值在于 sudo rosdep install --from-paths src --ignore-src -r -y 能一次补齐。 -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav2_msgs</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <!-- Ubuntu 上 import yaml 靠的是系统包 python3-yaml，不是 pip -->
+  <exec_depend>python3-yaml</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

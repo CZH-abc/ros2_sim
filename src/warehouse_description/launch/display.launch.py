@@ -28,11 +28,6 @@ def generate_launch_description():
             name="joint_state_publisher_gui",
         ),
 
-        # 仅用于测试。实际系统中通常由里程计或定位节点发布 odom -> base_link。
-        Node(
-            package="tf2_ros",
-            executable="static_transform_publisher",
-            name="map_to_odom",
-            arguments=["0", "0", "0", "0", "0", "0", "map", "odom"],
-        ),
+        # 这里原本有一条静态 map -> odom，阶段 3 起已删除：那条变换归 slam_toolbox 实时
+        # 计算并发布，静态节点会和它抢同一个 tf，表现为 RViz 里整台车突然跳回原点
     ])

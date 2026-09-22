@@ -1,0 +1,108 @@
+# 阶段 4 的 RViz 视图：只负责"看"，不负责发目标点。
+# 发目标点用命令行 ros2 action send_goal（见 README 步骤），
+# 因为点选工具要 nav2_rviz_plugins，少一个依赖少一个坑。
+# 初始位姿也不用手动点：AMCL 参数里 set_initial_pose 已经写死在出生点 (0, -4)。
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Enabled: true
+      Name: Grid
+      Plane Cell Count: 20
+    - Class: rviz_default_plugins/Map
+      Color Scheme: map
+      Enabled: true
+      Name: SLAM Map
+      Topic:
+        Depth: 1
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /map
+        Use Timestamp: false
+      Alpha: 0.4
+    - Class: rviz_default_plugins/Map
+      Color Scheme: costmap
+      Enabled: false
+      Name: Costmap (需要时才打开)
+      Topic:
+        Depth: 1
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /global_costmap/costmap
+    - Class: rviz_default_plugins/LaserScan
+      Color: 255; 0; 0
+      Color Transformer: FlatColor
+      Enabled: true
+      Name: Lidar
+      Position Transformer: XYZ
+      Size (m): 0.05
+      Style: Flat Squares
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /scan
+      Use Fixed Frame: true
+    - Class: rviz_default_plugins/RobotModel
+      Description Topic:
+        Value: /robot_description
+      Enabled: true
+      Name: RobotModel
+    - Class: rviz_default_plugins/TF
+      Enabled: true
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+    - Class: rviz_default_plugins/Path
+      Color: 0; 255; 0
+      Enabled: true
+      Length: 0.2
+      Name: Global Plan
+      Topic:
+        Depth: 1
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /plan
+    - Class: rviz_default_plugins/Path
+      Color: 255; 170; 0
+      Enabled: true
+      Length: 0.15
+      Name: Local Plan
+      Topic:
+        Depth: 1
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /following_path
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+  Value: true
+  Views:
+    Current:
+      Angle: 0.0
+      Class: rviz_default_plugins/TopDownOrtho
+      Name: Current View
+      Scale: 55
+      Target Frame: <Fixed Frame>
+      X: 0
+      Y: 0
+    Saved: ~
+Window Geometry:
+  Height: 900
+  Width: 1400
