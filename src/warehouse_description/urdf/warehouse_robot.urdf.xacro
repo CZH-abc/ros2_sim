@@ -222,6 +222,9 @@
   <gazebo reference="imu_link">
     <material>Gazebo/Black</material>
     <sensor name="warehouse_imu" type="imu">
+      <!-- SDF 里 always_on 默认 false，而 Gazebo 判断"有没有人订阅"只看它自己的 transport，
+           ROS 2 插件的发布者不算数，于是传感器永不激活：发布者建好了却零帧 -->
+      <always_on>true</always_on>
       <update_rate>100</update_rate>
       <plugin name="warehouse_imu_driver" filename="libgazebo_ros_imu_sensor.so">
         <ros>
